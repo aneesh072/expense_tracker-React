@@ -6,16 +6,18 @@ import IncomeExpenses from './components/IncomeExpenses';
 import TransactionList from './components/TransactionList';
 import AddTranscation from './components/AddTranscation';
 
+import { GlobalProvider } from './context/GlobalState';
+
 const App = () => {
   return (
-    <div>
+    <GlobalProvider>
       <Header />
       <div className="container"></div>
       <Balance />
       <IncomeExpenses />
       <TransactionList />
       <AddTranscation />
-    </div>
+    </GlobalProvider>
   );
 };
 
